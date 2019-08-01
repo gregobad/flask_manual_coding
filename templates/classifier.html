@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Local News Classification</title>
+       <link rel="stylesheet" media="screen" href ="static/bootstrap.min.css">
+       <link rel="stylesheet" href="static/bootstrap-theme.min.css">
+       <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+ 
+    </head>
+    <body>
+ 
+ 
+<div class="container">
+  {% if count is defined %}
+    <h1>{{ count }}</h1>
+  {% endif %}
+
+     <!-- <div class="alert alert-dark" role="alert"> -->
+     	<div class="jumbotron">
+     	<h4 class="display-4">Transcript {{ key }}</h4>
+     	<hr>
+           <p>     {{ transcript }}</p>
+     </div>
+  <form method="GET" role="form">
+    <div class="form-group">
+    <label for="coder">Coder name: <input type="text" class="form-control" id="coder" name="coder" value="{{ name }}"></label>  
+    </div>
+    <fieldset>
+    <legend>What is the topic of this segment:</legend> 
+    <input class="form-control" type="hidden" value="{{ key }}" name="key"> 
+  	<div class="form-check">
+  	<input type="radio" class="form-check-input" id="local" value = "local" name="category">
+  	<label for="local" class= "form-check-label">Local Politics</label>
+  	</div>
+  	<div class = "form-check">
+  	<input type="radio" class="form-check-input" id="national" value = "national" name="category">
+  	<label for="national" class= "form-check-label">National Politics</label>
+  	</div>
+  	<div class = "form-check">
+  	<input type="radio" class="form-check-input" id="other" value = "other" name="category">
+  	<label for="other" class= "form-check-label">Other</label>
+  	</div>
+    </fieldset>
+    <br>
+    <button type="submit" class="btn btn-success" name="again" value="new">Another</button>     <button type="submit" name="again" class="btn btn-danger" value="done">All Done</button>
+  </form>
+ 
+  <br>
+ 
+</div>
+<br>            
+</div>
+</div>
+</body>
+</html>
