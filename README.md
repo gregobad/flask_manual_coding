@@ -3,7 +3,7 @@ Simple interface for manual coding of text snippets, using Flask (https://pallet
 
 To run:
 
+```bash
 export FLASK_APP=classifier_interface.py
-
 flask run
-
+```
