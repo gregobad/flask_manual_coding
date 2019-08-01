@@ -1,5 +1,5 @@
 # flask_manual_coding
-Simple interface for manual coding of text snippets, using Flask (https://palletsprojects.com/p/flask/).
+Simple interface for manual coding of text snippets, using Flask (https://palletsprojects.com/p/flask/). Takes input in csv, writes output in csv.
 
 To run:
 
